@@ -8,6 +8,9 @@ scrape_configs:
       - targets: ['host.docker.internal:8081']
         labels:
           application: 'Identity Service'
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
   - job_name: 'DemoMetrics'
     static_configs:
       - targets:
